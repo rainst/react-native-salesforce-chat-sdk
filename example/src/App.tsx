@@ -1,12 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text, Pressable } from 'react-native';
-import {
-  setAppearance,
-  startChat,
-  onChatStateChangedListener,
-  closeChat,
-} from 'react-native-salesforce-chat-sdk';
+import { setAppearance, startChat } from 'react-native-salesforce-chat-sdk';
 
 export default function App() {
   const onPress = async () => {
@@ -33,6 +28,7 @@ export default function App() {
           isRequired: false,
           keyboardType: 0,
           maxLength: 50,
+          fieldType: 'Object',
         },
         {
           initialValue: 'Stretti',
@@ -42,6 +38,7 @@ export default function App() {
           isRequired: false,
           keyboardType: 0,
           maxLength: 50,
+          fieldType: 'Object',
         },
         {
           initialValue: 'rstretti@gmail.com',
@@ -51,6 +48,7 @@ export default function App() {
           isRequired: false,
           keyboardType: 0,
           maxLength: 50,
+          fieldType: 'Object',
         },
       ],
       prechatEntitiesData: [
@@ -85,7 +83,7 @@ export default function App() {
         defaultToMinimized: false,
         allowMinimization: true,
         allowURLPreview: true,
-        showPreChat: true,
+        showPreChat: false,
         visitName: 'Renato Stretti',
       },
       backgroundConfig: {

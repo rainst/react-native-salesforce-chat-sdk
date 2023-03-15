@@ -21,8 +21,11 @@ extension SalesforceChatSdk{
        
         return data
     }
-    
-    func createPreChatField(preChatData:PreChatField)-> SCSPrechatTextInputObject{
+    func createPreChatField(preChatData:PreChatField)-> SCSPrechatObject{
+        let data = SCSPrechatObject(label: preChatData.label, value: preChatData.initialValue)
+        return data
+    }
+    func createPreChatTextInputField(preChatData:PreChatField)-> SCSPrechatTextInputObject{
         let data = SCSPrechatTextInputObject(label: preChatData.label)
 		data?.label = preChatData.label
         data?.initialValue = preChatData.initialValue

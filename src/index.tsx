@@ -93,13 +93,14 @@ export function startChat(props: {
     buttonId: string;
   };
   preChatDatas?: {
-    initialValue: string;
-    autocapitalizationType: number;
-    autocorrectionType: number;
-    isRequired: boolean;
-    maxLength: number;
-    keyboardType: number;
+    initialValue?: string;
+    autocapitalizationType?: number;
+    autocorrectionType?: number;
+    isRequired?: boolean;
+    maxLength?: number;
+    keyboardType?: number;
     label: string;
+    fieldType: 'Object' | 'TextInput';
   }[];
   prechatEntitiesData?: PrechatEntitiy[];
   displayConfig?: {

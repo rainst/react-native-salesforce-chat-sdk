@@ -68,9 +68,13 @@ class SalesforceChatSdk: RCTEventEmitter, SCSChatSessionDelegate {
 			config.allowBackgroundNotifications = backgroundConfiguration.allowBackgroundNotifications
 			config.visitorName = displayConfiguration.visitName
 			for preChatData in preChatDatas {
-				let field = createPreChatField(preChatData: PreChatField(dictionary: preChatData as! NSDictionary) )
-	
-				config.prechatFields.append(field)
+                let element = PreChatField(dictionary: preChatData as! NSDictionary)
+                if(element.fieldType == "Object"){
+                    config.prechatFields.append(createPreChatField(preChatData: element))
+                }else{
+                    config.prechatFields.append(createPreChatTextInputField(preChatData: element))
+                }
+				
 			}
 			for prechatEntity in prechatEntitiesData {
 				let entity = createPreChatEntity(prechatEntity: PreChatEntity(dictionary: prechatEntity as! NSDictionary)! )
@@ -156,13 +160,11 @@ class SalesforceChatSdk: RCTEventEmitter, SCSChatSessionDelegate {
 		if(appearanceConfiguration.overlay != nil){
 			appearance.setColor(UIColor(hex: appearanceConfiguration.overlay!)!, forName: .overlay)
 		}
-		
-		
+        
 		DispatchQueue.main.async {
 			ServiceCloud.shared().appearanceConfiguration = appearance
 			resolve("done")
 		}
-//
 	}
 	
 }
