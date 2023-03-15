@@ -1,4 +1,4 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules, Platform, NativeEventEmitter } from 'react-native';
 
 const LINKING_ERROR =
   `The package 'react-native-salesforce-chat-sdk' doesn't seem to be linked. Make sure: \n\n` +
@@ -16,7 +16,122 @@ const SalesforceChatSdk = NativeModules.SalesforceChatSdk
         },
       }
     );
+export function closeChat(): Promise<any> {
+  return SalesforceChatSdk.closeChat();
+}
 
-export function multiply(a: number, b: number): Promise<number> {
-  return SalesforceChatSdk.multiply(a, b);
+export function onChatStateChangedListener(callback: (status: string) => void) {
+  const emitter = new NativeEventEmitter(SalesforceChatSdk);
+  const listener = emitter.addListener('onChatStateChanged', (data) => {
+    callback(data);
+  });
+  return {
+    remove: function remove() {
+      listener.remove();
+    },
+  };
+}
+
+export function onChatEndListener(callback: (reason: string) => void) {
+  const emitter = new NativeEventEmitter(SalesforceChatSdk);
+  const listener = emitter.addListener('onChatEnd', (data) => {
+    callback(data);
+  });
+  return {
+    remove: function remove() {
+      listener.remove();
+    },
+  };
+}
+
+export function onErrorListener(callback: (status: string) => void) {
+  const emitter = new NativeEventEmitter(SalesforceChatSdk);
+  const listener = emitter.addListener('onError', (data) => {
+    callback(data);
+  });
+  return {
+    remove: function remove() {
+      listener.remove();
+    },
+  };
+}
+
+/**
+ * @platform iOS only
+ */
+export function setAppearance(props: {
+  navbarBackground?: string;
+  navbarInverted?: string;
+  brandPrimary?: string;
+  brandSecondary?: string;
+  brandPrimaryInverted?: string;
+  brandSecondaryInverted?: string;
+  contrastPrimary?: string;
+  contrastSecondary?: string;
+  contrastTertiary?: string;
+  contrastQuaternary?: string;
+  contrastInverted?: string;
+  feedbackPrimary?: string;
+  feedbackSecondary?: string;
+  feedbackTertiary?: string;
+  overlay?: string;
+}): Promise<string> {
+  return SalesforceChatSdk.setAppearance(props);
+}
+
+/**
+ *
+ *
+ * @param displayConfig - iOS only
+ * @param backgroundConfig - iOS only
+ */
+export function startChat(props: {
+  chatConfig: {
+    liveAgentPod: string;
+    orgId: string;
+    deploymentId: string;
+    buttonId: string;
+  };
+  preChatDatas?: {
+    initialValue: string;
+    autocapitalizationType: number;
+    autocorrectionType: number;
+    isRequired: boolean;
+    maxLength: number;
+    keyboardType: number;
+    label: string;
+  }[];
+  prechatEntitiesData?: PrechatEntitiy[];
+  displayConfig?: {
+    allowMinimization?: boolean;
+    allowURLPreview?: boolean;
+    defaultToMinimized?: boolean;
+    showPreChat?: boolean;
+    visitName?: string;
+  };
+  backgroundConfig?: {
+    allowBackgroundExecution?: boolean;
+    allowBackgroundNotifications?: boolean;
+  };
+}): Promise<string> {
+  return SalesforceChatSdk.startChat(
+    props.chatConfig,
+    props.displayConfig,
+    props.backgroundConfig,
+    props.preChatDatas,
+    props.prechatEntitiesData
+  );
+}
+
+export interface PrechatEntitiy {
+  entityFieldMaps: EntityFieldMap[];
+  entityName: string;
+}
+
+export interface EntityFieldMap {
+  doCreate: boolean;
+  doFind: boolean;
+  fieldName: string;
+  isExactMatch: boolean;
+  label: string;
 }
