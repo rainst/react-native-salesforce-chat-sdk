@@ -1,28 +1,21 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text, Pressable } from 'react-native';
-import { setAppearance, startChat } from 'react-native-salesforce-chat-sdk';
+import { startChat, closeChat } from 'react-native-salesforce-chat-sdk';
 
 export default function App() {
   const onPress = async () => {
-    await setAppearance({
-      navbarBackground: '#01EC7F',
-      contrastPrimary: '#050505',
-      brandSecondary: '#000000',
-      brandPrimary: '#000000',
-      brandPrimaryInverted: '#FBFBFB',
-    });
     await startChat({
       chatConfig: {
-        liveAgentPod: 'd.la2-c2-ukb.salesforceliveagent.com',
-        buttonId: '5735j000000kLaS',
-        deploymentId: '5725j000000kKxx',
-        orgId: '00D5j000008blp2',
+        liveAgentPod: '',
+        buttonId: '',
+        deploymentId: '',
+        orgId: '',
       },
       preChatDatas: [
         {
           initialValue: 'Renato',
-          label: 'FirstName',
+          label: 'First Name',
           autocapitalizationType: 0,
           autocorrectionType: 0,
           isRequired: false,
@@ -32,7 +25,7 @@ export default function App() {
         },
         {
           initialValue: 'Stretti',
-          label: 'LastName',
+          label: 'Last Name',
           autocapitalizationType: 0,
           autocorrectionType: 0,
           isRequired: false,
@@ -77,6 +70,9 @@ export default function App() {
             },
           ],
           entityName: 'Contact',
+          linkToEntityField: 'ContactId',
+          linkToEntityName: 'Case',
+          saveToTranscript: 'ContactId',
         },
       ],
       displayConfig: {
@@ -99,6 +95,12 @@ export default function App() {
         style={{ backgroundColor: 'white', padding: 10 }}
       >
         <Text>Result</Text>
+      </Pressable>
+      <Pressable
+        onPress={closeChat}
+        style={{ backgroundColor: 'white', padding: 10 }}
+      >
+        <Text>Close Chat</Text>
       </Pressable>
     </View>
   );

@@ -75,8 +75,13 @@ export function setAppearance(props: {
   feedbackSecondary?: string;
   feedbackTertiary?: string;
   overlay?: string;
-}): Promise<string> {
-  return SalesforceChatSdk.setAppearance(props);
+}): Promise<string> | null {
+  if (Platform.OS === 'ios') {
+    return SalesforceChatSdk.setAppearance(props);
+  } else {
+    console.warn('this function is not support this platform');
+    return null;
+  }
 }
 
 /**
@@ -111,6 +116,7 @@ export function startChat(props: {
     visitName?: string;
   };
   backgroundConfig?: {
+    // iOS only
     allowBackgroundExecution?: boolean;
     allowBackgroundNotifications?: boolean;
   };
@@ -127,6 +133,9 @@ export function startChat(props: {
 export interface PrechatEntitiy {
   entityFieldMaps: EntityFieldMap[];
   entityName: string;
+  saveToTranscript?: string;
+  linkToEntityName?: string;
+  linkToEntityField?: string;
 }
 
 export interface EntityFieldMap {

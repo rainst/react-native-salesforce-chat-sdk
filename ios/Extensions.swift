@@ -10,12 +10,16 @@ import ServiceChat
 extension SalesforceChatSdk{
     func createPreChatEntity(prechatEntity:PreChatEntity)-> SCSPrechatEntity{
         let data = SCSPrechatEntity(entityName: prechatEntity.entityName)
+        data.linkToEntityName = prechatEntity.linkToEntityName
+        data.linkToEntityField = prechatEntity.linkToEntityField
+        data.saveToTranscript = prechatEntity.saveToTranscript
         for fieldMap in  prechatEntity.entityFieldMaps{
             print(fieldMap)
             let field = SCSPrechatEntityField(fieldName: fieldMap.fieldName, label: fieldMap.label)
             field.isExactMatch = fieldMap.isExactMatch
             field.doFind = fieldMap.doFind
             field.doCreate = fieldMap.doCreate
+            
             data.entityFieldsMaps.add(field)
         }
        
