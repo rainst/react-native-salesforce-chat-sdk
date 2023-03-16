@@ -39,7 +39,10 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "salesforce",
+    "Embedded Service",
+    "chat"
   ],
   "repository": "https://github.com/navy774989/react-native-salesforce-chat-sdk",
   "author": "alex <navy774989@gmail.com> (https://github.com/navy774989)",
