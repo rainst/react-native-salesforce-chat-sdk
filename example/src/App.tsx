@@ -1,16 +1,25 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text, Pressable } from 'react-native';
-import { startChat, closeChat } from 'react-native-salesforce-chat-sdk';
+import {
+  startChat,
+  closeChat,
+  onChatStateChangedListener,
+} from 'react-native-salesforce-chat-sdk';
 
 export default function App() {
+  React.useEffect(() => {
+    onChatStateChangedListener((data) => {
+      console.log(data);
+    });
+  }, []);
   const onPress = async () => {
     await startChat({
       chatConfig: {
-        liveAgentPod: '',
-        buttonId: '',
-        deploymentId: '',
-        orgId: '',
+        liveAgentPod: 'd.la2-c2-ukb.salesforceliveagent.com',
+        buttonId: '5735j000000kLaS',
+        deploymentId: '5725j000000kKxx',
+        orgId: '00D5j000008blp2',
       },
       preChatDatas: [
         {
