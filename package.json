@@ -13,6 +13,8 @@
     "android",
     "ios",
     "cpp",
+    "react-native.config.js",
+    "StripDevelopmentResources.sh",
     "ios-frameworks",
     "*.podspec",
     "!lib/typescript/example",
