@@ -13,6 +13,8 @@
     "android",
     "ios",
     "cpp",
+    "app.plugin.js",
+    "plugin",
     "react-native.config.js",
     "StripDevelopmentResources.sh",
     "ios-frameworks",
