@@ -184,6 +184,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				51B185475765E390B2324259 /* [CP-User] [RNSFCSDK] Strip Development Resources */,
 			);
 			buildRules = (
 			);
@@ -282,6 +283,18 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SalesforceChatSdkExample/Pods-SalesforceChatSdkExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		51B185475765E390B2324259 /* [CP-User] [RNSFCSDK] Strip Development Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] [RNSFCSDK] Strip Development Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PROJECT_ROOT=\"$PROJECT_DIR\"/..\n  \n    if [ \"${CONFIGURATION}\" = \"Release\" ]; then\n        $PROJECT_ROOT/node_modules/react-native-salesforce-chat-sdk/ios-frameworks/ServiceCore.xcframework/ios-arm64/ServiceCore.framework/prepare-framework\n    else\n        $PROJECT_ROOT/node_modules/react-native-salesforce-chat-sdk/ios-frameworks/ServiceCore.xcframework/ios-arm64_x86_64-simulator/ServiceCore.framework/prepare-framework\n    fi;";
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
