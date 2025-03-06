@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		JYbJnvoDTm2Zhb+wqZp/7lxnfDA=
+		UpWJ78G/JK5S9sJu/Hlni09Vwbo=
 		</data>
 		<key>Chat.momd/Chat.mom</key>
 		<data>
-		hFzstlzG9bRb2pQY5xX0lrKTOx4=
+		8zkjIkesHryBPEITO6dHQRI1e2o=
 		</data>
 		<key>Chat.momd/VersionInfo.plist</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Frameworks/ChatCore.framework/Headers/SCSChatConfiguration.h</key>
 		<data>
-		VClIntXHVWnFJ2VnXqtYHXJUFf8=
+		8x2BemvazzdfcG8pCND/aAUlRoE=
 		</data>
 		<key>Frameworks/ChatCore.framework/Headers/SCSChatCoreDefines.h</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Frameworks/ChatCore.framework/Info.plist</key>
 		<data>
-		jX15PpUf9QfmuuW8O9W0meejRYg=
+		mtTDQ9VkikJifN1gBKMsfPSzmYg=
 		</data>
 		<key>Frameworks/ChatCore.framework/PrivateHeaders/Private.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Frameworks/ChatUI.framework/Headers/SCSChatInterface.h</key>
 		<data>
-		gI4ZIYfSJG5Oc9H0T3YqVobOW/8=
+		LkQ6RRGrlETiDSMo/2+oYZjXTDM=
 		</data>
 		<key>Frameworks/ChatUI.framework/Headers/SCSChatInterfaceDelegate.h</key>
 		<data>
@@ -190,11 +190,11 @@
 		</data>
 		<key>Frameworks/ChatUI.framework/Info.plist</key>
 		<data>
-		niTHnQ8hFa1LylxHVtgtM1xNXQc=
+		MIZo+wdeczb/VAQXT/qRdXVFlgE=
 		</data>
 		<key>Frameworks/ChatUI.framework/PrivateHeaders/Private.h</key>
 		<data>
-		+r7Cxa334K68UepLnCVaMMgZgWs=
+		HE67Jnnmp9lpOPGcyJn/xT23yns=
 		</data>
 		<key>Frameworks/ChatUI.framework/PrivateHeaders/SCSChatFullscreenView.h</key>
 		<data>
@@ -246,11 +246,11 @@
 		</data>
 		<key>Headers/ServiceChat.h</key>
 		<data>
-		qlej0SqSAOZn86jvfmBLVGvd/sg=
+		hVfDU0iHy/v3opCOGC77gqwWE5A=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hGjUuHzjTGYtTp8XjTis76tj9ao=
+		oEkEgfOm9XfHyg9vsiPwyPjmvw0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -262,11 +262,11 @@
 		</data>
 		<key>SCSFormPicklistView.nib</key>
 		<data>
-		whYapAoYC6ICzMzBBYoWd8SMTRk=
+		PN6NpssiGrhy4HgTvslIFAtO5Ds=
 		</data>
 		<key>SCSFormTextInputView.nib</key>
 		<data>
-		LdSrN8ynDqD8ixy6DVF1VrknsgY=
+		ayRyoPoKjRB2gpYIanzif9qXxUI=
 		</data>
 		<key>ar.lproj/ChatUI.strings</key>
 		<dict>
@@ -531,14 +531,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AGwa4KpcWF6WgcVyIv2W6lLHvYYavX1KWkqCS3jHwkg=
+			ghJqNfW6OyYuJNc/wihwjtXxHxpWqlMjcvSZj7hE760=
 			</data>
 		</dict>
 		<key>Chat.momd/Chat.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7wVmhva6fW4pICiD127bIOb2p7xY4BXSXwLkUhlJ7jg=
+			DgkXo1tMZ137ThhtnIGpL+KYhRHrparl4GN2GKUsXK0=
 			</data>
 		</dict>
 		<key>Chat.momd/VersionInfo.plist</key>
@@ -622,7 +622,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YOTjwf6tZjeY73J1hZUARtJuKOOh+gaID4K2nGQ6D7Y=
+			olVHcrnfivFte7U8e+hEyRnDxL4MORHgAg54Cvd0WYY=
 			</data>
 		</dict>
 		<key>Frameworks/ChatCore.framework/Headers/SCSChatCoreDefines.h</key>
@@ -804,7 +804,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jGfnDA6A3zOVTdrps+c6jaOatNJDuTO8RVEhNe8r2Yg=
+			L/FyGOqCzLVS2qtHBwqSrXMrQ+2AGsobKdQIpJROkwI=
 			</data>
 		</dict>
 		<key>Frameworks/ChatCore.framework/PrivateHeaders/Private.h</key>
@@ -825,7 +825,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FyBmnoefC7DNHIyIwzuG2FcnRNTmK1ZX5TuEikhl5RQ=
+			DuBbshbDGTA0IITiHEUFLYUc0zG2cqx3Pc6MDDIgbMs=
 			</data>
 		</dict>
 		<key>Frameworks/ChatUI.framework/Headers/SCSChatInterfaceDelegate.h</key>
@@ -853,14 +853,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CSIZ+8gVvvoMrK+05AfMUrF1T3wWzEjvKN+bk1gT7Rg=
+			h6lhxFYvQ7TBWf23StBCglQ4QcaKBQugEZRI9ZYFC8c=
 			</data>
 		</dict>
 		<key>Frameworks/ChatUI.framework/PrivateHeaders/Private.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xmFhJiWu37+z0ST8S3tryLAMBnMmwF9SmFoVgcLYtLc=
+			JA3P1w2j6JZX/YuKB6hFRuH/m/WpnykEreuA8aW1uvk=
 			</data>
 		</dict>
 		<key>Frameworks/ChatUI.framework/PrivateHeaders/SCSChatFullscreenView.h</key>
@@ -951,7 +951,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Udds79gpFWEIurjUBiqXGjlK/3vTpDudNbB3YdkafiM=
+			8IkCQ70iQZs1hwj5DZcq+1Nuw9BUvgCJoICHdRygvBI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -972,14 +972,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6sur/FyGlRQqzeVT0U3LqL+YcLQnMKfqHq11XziC68c=
+			G0TQjyTTbRlSo10R8ZikLDNbTO20yPa70fhDy/4PCVU=
 			</data>
 		</dict>
 		<key>SCSFormTextInputView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dUm4OVYoqIliBlQofpCS8U0Ya3UZoY7p1F3QKRb0RMA=
+			HdsPCiKtyuVtsmzdC5wMD0IITh8b75LxUUmdY9bF+Ag=
 			</data>
 		</dict>
 		<key>ar.lproj/ChatUI.strings</key>

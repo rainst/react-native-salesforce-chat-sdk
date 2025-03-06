@@ -138,6 +138,12 @@ typedef NS_ENUM(NSUInteger, SCSChatConfigurationQueueStyle) {
 @property (nonatomic, copy) NSString *visitorName;
 
 /**
+ A string which will appear on the PreChat form for chat sessions which can be used to serve Terms and Conditions
+ to the end user.
+ */
+@property (nonatomic, readwrite, copy) NSAttributedString *termsAndConditions;
+
+/**
  Determines whether the framework receives and displays updates about the session queue position.
  
  Defaults to `YES`.

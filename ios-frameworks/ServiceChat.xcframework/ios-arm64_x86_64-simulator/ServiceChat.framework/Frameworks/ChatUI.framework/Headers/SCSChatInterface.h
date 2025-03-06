@@ -88,6 +88,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showPrechatWithFields:(NSArray<SCSPrechatObject *> *)prechatFields modal:(BOOL)modal completion:(SCSPrechatCompletion)completion;
 
 /**
+ Shows the pre-chat UI with the specified pre-chat fields.
+
+ @note If the user cancels, the `prechatFields` contents will be unchanged in the completion block.
+
+ @param prechatFields Array of `SCSPrechatObject` objects that represents the pre-chat configuration.
+ @param configuration  The `SCSChatConfiguration` object which represents the session configuration.
+ @param modal Indicates whether this view displays as a modal UI (`true`), or as a non-modal full-screen UI (`false`).
+ @param completion Contains an array of pre-chat fields populated with the user input.
+                   Also includes a `BOOL` determining whether the user submitted the form without canceling.
+ */
+- (void)showPrechatWithFields:(NSArray<SCSPrechatObject *> *)prechatFields
+                       config:(SCSChatConfiguration *)config
+                        modal:(BOOL)modal
+                   completion:(SCSPrechatCompletion)completion;
+
+/**
  Shows the pre-chat UI with the specified pre-chat fields. This method shows a non-modal, full-screen view.
  To support a modal view, see `-showPrechatWithFields:modal:completion:`.
 
