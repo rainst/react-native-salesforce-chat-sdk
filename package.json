@@ -49,13 +49,13 @@
     "Embedded Service",
     "chat"
   ],
-  "repository": "https://github.com/navy774989/react-native-salesforce-chat-sdk",
+  "repository": "https://github.com/rainst/react-native-salesforce-chat-sdk",
   "author": "alex <navy774989@gmail.com> (https://github.com/navy774989)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/navy774989/react-native-salesforce-chat-sdk/issues"
+    "url": "https://github.com/rainst/react-native-salesforce-chat-sdk/issues"
   },
-  "homepage": "https://github.com/navy774989/react-native-salesforce-chat-sdk#readme",
+  "homepage": "https://github.com/rainst/react-native-salesforce-chat-sdk#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
