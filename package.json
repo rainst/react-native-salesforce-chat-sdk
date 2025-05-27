@@ -1,7 +1,7 @@
 {
   "name": "react-native-salesforce-chat-sdk",
-  "version": "0.7.0",
-  "description": "test",
+  "version": "0.7.1",
+  "description": "Salesforce chat sdk integration for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
